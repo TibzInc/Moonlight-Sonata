@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+            .picWrapper{
+				width: 100%;
+			
+			
+			}
+			button{
+				background-color: transparent;
+				border: none;
+			
+			}
+			
+			#button1{
+				width:100%;
+				height: 40px;
+				position: fixed;
+				
+				
+			}
+			
+			#button2{
+				display: none
+				
+			}
+            .picBackground{
+				height:100%;
+				width:100%;
+				background-color: black;
+			}
+            
+            
+        </style>
+        
+        
+        
+        
+        
+    </head>
+    
+    <body>
+	<div class="picBackground">
+        <button id="button1">Play</button><br>
+		<button id="button2">Pause</button><br>
+		
+        
+		<div class="picWrapper">
+			<img class="picWrapper" height="90%" width="100%" id="workoutpic" src="images/sonata/sonata.svg" alt="workout.img"/>
+		</div>
+        
+        <script>
+            const button1 = document.querySelector("#button1");
+			const button2 = document.querySelector("#button2");
+            const pic1 = document.querySelector("#workoutpic");
+			
+            let animCount=0;
+            
+            function animate()
+            {
+                if (animCount==0)
+                {
+                    animCount = 1;
+                    pic1.src="images/sonata/sonata.svg";
+                    
+                }
+                else if (animCount==1)
+                {
+                    animCount = 2;
+                    pic1.src="images/sonata/sonata_2.svg";
+                    
+                }
+				else if (animCount==2)
+                {
+                    animCount = 3;
+                    pic1.src="images/sonata/sonata_3.svg";
+                    
+                }
+				else if (animCount==3)
+                {
+                    animCount = 4;
+                    pic1.src="images/sonata/sonata_4.svg";
+                    
+                }
+				else if (animCount==4)
+                {
+                    animCount = 5;
+                    pic1.src="images/sonata/sonata_5.svg";
+                    
+                }
+				else if (animCount==5)
+                {
+                    animCount = 6;
+                    pic1.src="images/sonata/sonata_6.svg";
+                    
+                }
+				else if (animCount==6)
+                {
+                    animCount = 7;
+                    pic1.src="images/sonata/sonata_7.svg";
+                    
+                }
+				else if (animCount==7)
+                {
+                    animCount = 8;
+                    pic1.src="images/sonata/sonata_8.svg";
+                    
+                }
+				else if (animCount==8)
+                {
+                    animCount = 9;
+                    pic1.src="images/sonata/sonata_9.svg";
+                    
+                }
+				else if (animCount==9)
+                {
+                    animCount = 10;
+                    pic1.src="images/sonata/sonata_10.svg";
+                    
+                }
+				else if (animCount==10)
+                {
+                    animCount = 11;
+                    pic1.src="images/sonata/sonata_11.svg";
+                    
+                }
+                else if (animCount==11)
+                {
+                    animCount = 0;
+                    pic1.src="images/sonata/sonata.svg";
+                    
+                }
+            }
+            
+            function startAnimation()
+            {
+                setInterval(animate,200);
+            }
+            
+            
+            
+            
+            button1.addEventListener("click",function(){
+                animCount=0;
+                
+            });
+			
+			button2.addEventListener("click",function(){
+				animCount=null;
+			});
+            
+            startAnimation();
+            
+            
+        </script>
+	</div>		
+    </body>
+</html>
